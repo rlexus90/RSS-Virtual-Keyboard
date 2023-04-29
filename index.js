@@ -1,3 +1,3 @@
-import { keyboard } from './keyboard.js';
-console.log(keyboard);
+import keyboard from './keyboard.js';
 
+console.log(keyboard);
