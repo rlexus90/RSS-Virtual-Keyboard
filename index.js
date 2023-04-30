@@ -1,5 +1,5 @@
-import keyboard from './keyboard.js';
-import Element from './addElement.js';
+import keyboard from './js/keyboard.js';
+import Element from './js/addElement.js';
 
 let lang = window.localStorage.getItem('lang') || 'en';
 
@@ -15,10 +15,9 @@ function drawPage() {
   });
 }
 
-
-const rowsHtml = document.querySelectorAll('.row');
-
 function drawKeybord() {
+  const rows = Object.keys(keyboard[lang]);
+  const rowsHtml = document.querySelectorAll('.row');
   rows.forEach((row, index) => {
     Object.values(keyboard[lang][row]).forEach((key) => {
       const el = new Element('div', key.norm, ['key', key.type,
@@ -28,8 +27,6 @@ function drawKeybord() {
   });
 }
 
-drawKeybord();
-
 function addStyle() {
   const head = document.querySelector('head');
   const style = document.createElement('link');
@@ -38,3 +35,10 @@ function addStyle() {
   head.appendChild(style);
 }
 
+async function loadPage() {
+  await addStyle();
+  await drawPage();
+  await drawKeybord();
+}
+
+loadPage();
