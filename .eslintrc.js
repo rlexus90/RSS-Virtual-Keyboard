@@ -12,7 +12,6 @@ module.exports = {
   },
   rules: {
     'import/extensions': 'off',
-    // eslint, linebreak, style: ["error", "windows"],
     'linebreak-style': 0,
   },
 };
