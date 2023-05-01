@@ -684,11 +684,11 @@ const keyboard = {
     11: {
       en: {
         norm: '↑',
-        shift: '↑"',
+        shift: '↑',
       },
       ru: {
         norm: '↑',
-        shift: '↑"',
+        shift: '↑',
       },
 
       type: 'system',
