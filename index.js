@@ -19,7 +19,7 @@ async function loadPage() {
   const keyboard = document.querySelector('.keyboard');
   keyboard.addEventListener('click', (e) => {
     const key = e.target.closest('.key');
-    keyClick(key.id);
+    if (key) keyClick(key.id);
   });
 }
 loadPage();
