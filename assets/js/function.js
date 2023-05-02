@@ -9,6 +9,9 @@ let lang = window.localStorage.getItem('lang') || 'en';
 function changeLang() {
   lang = (lang === 'en') ? 'ru' : 'en';
 }
+window.addEventListener('beforeunload', () => {
+  window.localStorage.setItem('lang', `${lang}`);
+});
 
 function drawPage() {
   const body = document.querySelector('body');
