@@ -60,6 +60,10 @@ function addStyle() {
   style.href = './assets/css/style.css';
   style.setAttribute('rel', 'stylesheet');
   head.appendChild(style);
+  const favicon = document.createElement('link');
+  favicon.href = './assets/favicon-32x32.png';
+  favicon.setAttribute('rel', 'icon');
+  head.appendChild(favicon);
 }
 
 function showKeys(shift) {
