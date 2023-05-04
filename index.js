@@ -31,6 +31,7 @@ function changeLang() {
 function keyPress(e) {
   const { code } = e;
   const keyHtml = document.querySelector(`#${code}`);
+  if (!keyHtml) return;
   if (e.key === 'F12') return;
   if (e.key === 'CapsLock') {
     caps();
@@ -53,6 +54,7 @@ function keyPress(e) {
 function keyUp(e) {
   const { code } = e;
   const keyHtml = document.querySelector(`#${code}`);
+  if (!keyHtml) return;
   if (e.key === 'F12') return;
   if (e.key === 'CapsLock') { return; }
   keyHtml.classList.remove('pressed');
