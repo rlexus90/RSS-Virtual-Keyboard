@@ -1,0 +1,129 @@
+span {
+  display: none;
+}
+
+.undefined {
+  margin: 10px auto;
+  width: 500px;
+  text-align: center;
+}
+
+.input {
+  opacity: 0;
+  display: block;
+  margin: 0 auto;
+  height: 0px;
+  width: 0px;
+  border: none;
+}
+
+.input:focus {
+  border: none;
+}
+
+.textarea {
+  display: block;
+  margin: 10px auto;
+  width: 740px;
+  height: 200px;
+}
+
+.key {
+  cursor: pointer;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #444;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.system {
+  background-color: #222;
+}
+
+.pressed {
+  background-color: red;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+
+.keyboard {
+  opacity: 2;
+  padding: 0 5px;
+  max-width: 740px;
+  margin: 0 auto;
+  background-color: #888;
+  border: 2px solid #000;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+#Backspace {
+  width: 100px;
+}
+
+#Tab {
+  width: 60px;
+}
+
+#CapsLock {
+  width: 80px;
+}
+
+#Enter {
+  width: 80px;
+}
+
+#ShiftLeft,
+#ShiftRight {
+  width: 100px;
+}
+
+#Space {
+  width: 306px;
+}
+
+.en .en-norm {
+  display: block;
+}
+
+.shift-en .en-shift {
+  display: block;
+}
+
+.ru .ru-norm {
+  display: block;
+}
+
+.shift-ru .ru-shift {
+  display: block;
+}
+
+.en.caps .en-norm {
+  display: block;
+}
+.en.caps .letter .en-shift {
+  display: block;
+}
+.en.caps .letter .en-norm {
+  display: none;
+}
+
+.ru.caps .ru-norm {
+  display: block;
+}
+.ru.caps .letter .ru-shift {
+  display: block;
+}
+.ru.caps .letter .ru-norm {
+  display: none;
+}
